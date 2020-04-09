@@ -1,5 +1,4 @@
 package cmd;
-import java.lang.reflect.Method;
 import java.io.File;
 import java.util.regex.Pattern;
 import iface.Command;
@@ -19,8 +18,8 @@ public class Help implements Command {
    public void exec (Player p) {
       if (cmdName != null) {
          try {
-            Class cmdClass = Class.forName("cmd." + cmdName);	
-            Object obj = cmdClass.newInstance();
+            Class<?> cmdClass = Class.forName("cmd." + cmdName);
+            Object obj = cmdClass.getConstructor().newInstance();
             Output.println(obj);
          } catch (Exception classNotFoundException) {
             Output.println(cmdName + " does not exist.");  
