@@ -39,13 +39,13 @@ public class Help implements Command {
          // Command names will be .java or .class files
          for (String s : cmdList)
             if ((Pattern.matches(".*java$", s)) || (Pattern.matches(".*class$", s))) {
-               // Remove the .java from the command name
+               // Remove the .extension from the command name
                String cmd = s.substring(0, s.indexOf("."));
                Output.println(cmd);
-            } else {
+            }
 
                Output.println("Type help <cmd_name> for help on a specific command.");
-            }
+
       }
    }
 

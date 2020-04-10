@@ -54,8 +54,8 @@ public class Parser {
     	  //TODO: dynamically create ReferenceType to be parameterized
     	  //Create a new instance of this class
     	  // Get the class object associated with the command name
-        Class tClass = Class.forName("cmd."+cmd);
-		  obj = tClass.newInstance();
+        Class<?> tClass = Class.forName("cmd."+cmd);
+		  obj = tClass.getConstructor().newInstance();
 		  Object parameters[] = {params};
 		  //Grab the method construct from the class
 		  Method con = tClass.getMethod("construct", String[].class);
