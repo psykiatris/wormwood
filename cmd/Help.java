@@ -42,9 +42,10 @@ public class Help implements Command {
                // Remove the .java from the command name
                String cmd = s.substring(0, s.indexOf("."));
                Output.println(cmd);
-            } else if (cmdList.e)
+            } else {
 
-         Output.println("Type help <cmd_name> for help on a specific command.");
+               Output.println("Type help <cmd_name> for help on a specific command.");
+            }
       }
    }
 
