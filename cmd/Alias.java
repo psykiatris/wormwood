@@ -83,7 +83,7 @@ public class Alias implements Command {
 	/** 
 	 * Removes current alias
 	 */
-	public void remove(){
+	private void remove(){
 		for(int i = 0; i < aliases.size(); i++){
 			if(aliases.get(i).name.equalsIgnoreCase(this.name)){
 				aliases.remove(i);

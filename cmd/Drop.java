@@ -12,7 +12,7 @@ import iface.Command;
 * current room's list of items.
 */
 public class Drop implements Command {
-   String itemName;
+   private String itemName;
 
     /**
     * @param p	the player executing the Drop command.
@@ -46,7 +46,7 @@ public class Drop implements Command {
    /** 
     * @param itemToDrop	the item to be dropped
     */
-   public void setName (String itemToDrop) {
+   private void setName(String itemToDrop) {
       itemName = itemToDrop;
    }
 

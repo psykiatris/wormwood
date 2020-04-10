@@ -589,8 +589,8 @@
     <inspection_tool class="BreakStatement" enabled="true" level="WARNING" enabled_by_default="true">
       <scope name="Production" level="WARNING" enabled="false" />
     </inspection_tool>
-    <inspection_tool class="BreakStatementWithLabel" enabled="true" level="WARNING" enabled_by_default="true">
-      <scope name="Production" level="WARNING" enabled="true" />
+    <inspection_tool class="BreakStatementWithLabel" enabled="false" level="WARNING" enabled_by_default="false">
+      <scope name="Production" level="WARNING" enabled="false" />
     </inspection_tool>
     <inspection_tool class="BuildoutUnresolvedPartInspection" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="BusyWait" enabled="true" level="WARNING" enabled_by_default="true">
@@ -1973,8 +1973,8 @@
     <inspection_tool class="KotlinRedundantOverride" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="KotlinTestJUnit" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="KotlinUnusedImport" enabled="false" level="WARNING" enabled_by_default="false" />
-    <inspection_tool class="LabeledStatement" enabled="true" level="WARNING" enabled_by_default="true">
-      <scope name="Production" level="WARNING" enabled="true" />
+    <inspection_tool class="LabeledStatement" enabled="false" level="WARNING" enabled_by_default="false">
+      <scope name="Production" level="WARNING" enabled="false" />
     </inspection_tool>
     <inspection_tool class="LambdaBodyCanBeCodeBlock" enabled="true" level="INFORMATION" enabled_by_default="true">
       <scope name="Production" level="INFORMATION" enabled="true" />

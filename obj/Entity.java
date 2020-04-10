@@ -21,10 +21,10 @@ public class Entity {
    private ArrayList<String> identifiers = new ArrayList<String>();
  
    /** Default blank constructor. */
-   public Entity () {}
+   Entity() {}
 
    /** Full constructor. */
-   public Entity(String name, String[] identifiers, String description, String roomDescription){
+   Entity(String name, String[] identifiers, String description, String roomDescription){
       setName(name);
       setDesc(description);
       setRoomDesc(roomDescription);
@@ -33,7 +33,7 @@ public class Entity {
 
    /** Alternative full constructor, but instead of taking an array
     * of identifiers, takes a single identifier. */
-   public Entity(String name, String identifier, String description, String roomDescription) {
+   Entity(String name, String identifier, String description, String roomDescription) {
       setName(name);
       setDesc(description);
       setRoomDesc(roomDescription);
@@ -41,20 +41,20 @@ public class Entity {
    }
 
    /** Constructor, missing identifiers. */
-   public Entity(String name, String description, String roomDescription) {
+   Entity(String name, String description, String roomDescription) {
       setName(name);
       setDesc(description);
       setRoomDesc(roomDescription);
    }
 
    /** Constructor, missing identifiers and roomDesc.*/
-   public Entity(String name, String description) {
+   Entity(String name, String description) {
       setName(name);
       setDesc(description);
    }
    
    /** Sets the object's name. */
-   public void setName(String name) {
+   void setName(String name) {
       this.name = name;
       addIdentifier(name);
    }
@@ -65,12 +65,12 @@ public class Entity {
    }
  
    /** Sets object's description, which is printed when the object is examined. */
-   public void setDesc(String description) {
+   private void setDesc(String description) {
       this.desc = description;
    }
  
    /** @return object's description. */
-   public String getDesc() {
+   String getDesc() {
       return this.desc;
    }
  
@@ -86,7 +86,7 @@ public class Entity {
    }
  
    /** @return object's room description. */
-   public String getRoomDesc() {
+   String getRoomDesc() {
       return this.roomDesc;
    }
  
@@ -119,19 +119,19 @@ public class Entity {
    }
  
    /** Adds an identifier to the entity. */
-   public void addIdentifier(String ident) {
+   private void addIdentifier(String ident) {
       this.identifiers.add(ident);
    }
  
    /** Adds a list of identifiers to the entity. */
-   public void addIdentifiers(String[] ident) {
+   private void addIdentifiers(String[] ident) {
       for (int i = 0; i < ident.length; i++)
          this.identifiers.add(ident[i]);
    }
  
    /** @return Returns true if the Entity has the identifier specified,
 * false if it doesn't. */
-   public boolean hasIdentifier(String name) {
+   boolean hasIdentifier(String name) {
       // Look for the identifier desired in the list
       for (int i = 0; i < this.identifiers.size(); i++)
          if (name.equalsIgnoreCase(identifiers.get(i)))
