@@ -748,8 +748,8 @@
     <inspection_tool class="ClassIndependentOfModule" enabled="true" level="WARNING" enabled_by_default="true">
       <scope name="Production" level="WARNING" enabled="true" />
     </inspection_tool>
-    <inspection_tool class="ClassInheritanceDepth" enabled="true" level="WARNING" enabled_by_default="true">
-      <scope name="Production" level="WARNING" enabled="true">
+    <inspection_tool class="ClassInheritanceDepth" enabled="false" level="WARNING" enabled_by_default="false">
+      <scope name="Production" level="WARNING" enabled="false">
         <option name="m_limit" value="2" />
       </scope>
       <option name="m_limit" value="2" />

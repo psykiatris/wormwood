@@ -28,7 +28,7 @@ public class Look implements Command {
       }
       
       String exits = HandleData.arrToString(dirs);
-      if(!exits.equalsIgnoreCase("")){
+      if(!"".equalsIgnoreCase(exits)){
     	    d += " There ";
     	   if(exits.contains("and"))
     	      d += "are exits";

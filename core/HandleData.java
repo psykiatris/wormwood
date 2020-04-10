@@ -29,7 +29,7 @@ public class HandleData {
 	 */
 	public static String upperFirst(String oldString){
 		String newString = "";
-		if(!oldString.equalsIgnoreCase("") && oldString != null){
+		if(!"".equalsIgnoreCase(oldString) && oldString != null){
 			char[] temp = oldString.toCharArray();
 			temp[0] = Character.toUpperCase(temp[0]);
 			
@@ -52,7 +52,7 @@ public class HandleData {
 		for(int i = 0; i <= last; i++){
 			if(s[i] != null){
 				//Inserts an and if it is the last element and there are other elements
-				if(i == last && !rtn.equalsIgnoreCase(""))
+				if(i == last && !"".equalsIgnoreCase(rtn))
 					rtn += "and ";
 				rtn += s[i];
 				

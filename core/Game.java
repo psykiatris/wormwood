@@ -1,8 +1,8 @@
 package core;
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import obj.*;
-import iface.*;
 import cmd.*;
 import game.*;
 
@@ -73,13 +73,15 @@ public class Game {
    private void executeCommand () {
 	  try {
 		  //Gets the class of the cmd object passed
-		  Class tClass = cmd.getClass();
+		  Class<? extends Object> tClass = cmd.getClass();
 		  //Creates the method 'exec' belonging to this instance and executes it
 		  Method exec = tClass.getMethod("exec", Player.class);
 		  exec.invoke(cmd, p);
 	  //Catches any errors
-	  } catch(Exception e){
-		  Output.println("Problem executing command.");
+	  } catch (IllegalAccessException | IllegalArgumentException | NoSuchMethodException | SecurityException | InvocationTargetException e) {
+          Output.println("Problem executing command.");
+      } catch(RuntimeException e){
+		  // Do nothing
 	  }
    }
 }

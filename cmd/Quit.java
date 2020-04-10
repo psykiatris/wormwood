@@ -17,12 +17,12 @@ public class Quit implements Command {
 
       do {
          answer = Input.nextLine(); 
-         if (answer.equalsIgnoreCase("y")) 
+         if ("y".equalsIgnoreCase(answer))
             Game.kill();
-         else if (!answer.equalsIgnoreCase("n") && !answer.equalsIgnoreCase("y"))
+         else if (!"n".equalsIgnoreCase(answer) && !"y".equalsIgnoreCase(answer))
             // Continue loop
             Output.println("You must answer with y or n.");
-      } while (!answer.equalsIgnoreCase("n") && !answer.equalsIgnoreCase("y"));
+      } while (!"n".equalsIgnoreCase(answer) && !"y".equalsIgnoreCase(answer));
    }
    
    public String toString () {

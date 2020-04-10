@@ -142,13 +142,13 @@ public class Grid {
 	public Exit getExit(Room r, String d){
 		int[] offset = {0,0};
 		
-		if(d.equalsIgnoreCase("n"))
+		if("n".equalsIgnoreCase(d))
 			offset[1] = 1;
-		else if(d.equalsIgnoreCase("e"))
+		else if("e".equalsIgnoreCase(d))
 			offset[0] = 1;
-		else if(d.equalsIgnoreCase("s"))
+		else if("s".equalsIgnoreCase(d))
 			offset[1] = -1;
-		else if(d.equalsIgnoreCase("w"))
+		else if("w".equalsIgnoreCase(d))
 			offset[0] = -1;
 		else 
 			return null;
