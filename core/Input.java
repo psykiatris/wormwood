@@ -1,4 +1,5 @@
 package core;
+import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 /**
@@ -7,15 +8,23 @@ import java.util.Scanner;
  * Programmers should use Input.nextLine() instead of the 
  * Scanner class directly. */
 public class Input {
-   /** Gets the next line of input from the keyboard. */
+
+   /**
+    * Retrieves next line from console.
+    * @return next line of text
+    */
    public static String nextLine() {
-      Scanner k = new Scanner(System.in);
+      Scanner k = new Scanner(System.in, StandardCharsets.UTF_8);
       return k.nextLine();
    }
 
-   /** Gets the next integer from the keyboard. */
+
+   /**
+    * Retrieves the next integer from the console.
+    * @return next integer
+    */
    public static int nextInt() {
-      Scanner k = new Scanner(System.in);
+      Scanner k = new Scanner(System.in, StandardCharsets.UTF_8);
       return k.nextInt();
    }
 }
